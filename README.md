@@ -23,13 +23,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/screenshots/workitdesktop.png)
-![](./public/screenshots/workitmobile.png)
+![](./public/screenshots/ResultsSummaryComponentDesktop.png)
+![](./public/screenshots/ResultsSummaryComponentMobile.png)
 
 ### Links
 
-- Solution URL: [Results Summary Component solution](https://www.frontendmentor.io/solutions/workit-landing-page-tailwindcssreactjsvite-GQaaw8Tne_)
-- Live Site URL: [Results Summary Component livesite](https://lorenzoaniel.github.io/workit_landing_page/)
+- Solution URL: [Results Summary Component solution]()
+- Live Site URL: [Results Summary Component livesite](https://lorenzoaniel.github.io/results-summary-component/)
 
 ## My process
 
