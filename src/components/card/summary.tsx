@@ -1,5 +1,9 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { _customtheme } from "../../styles/_customtheme";
+import iconReaction from "../../assets/images/icon-reaction.svg";
+import iconMemory from "../../assets/images/icon-memory.svg";
+import iconVerbal from "../../assets/images/icon-verbal.svg";
+import iconVisual from "../../assets/images/icon-visual.svg";
 
 interface Props {
 	iconSrc: string;
@@ -8,6 +12,14 @@ interface Props {
 }
 
 const SummaryCard: React.FC<Props> = ({ iconSrc, category, score }) => {
+	const imageMap: { [key: string]: string } = {
+		"icon-reaction": iconReaction,
+		"icon-memory": iconMemory,
+		"icon-verbal": iconVerbal,
+		"icon-visual": iconVisual,
+	};
+	const importedIconSrc = imageMap[iconSrc];
+
 	const bgColorMap: { [key: string]: string } = {
 		Reaction: "bg-redwhite",
 		Memory: "bg-yellowwhite",
@@ -37,12 +49,7 @@ const SummaryCard: React.FC<Props> = ({ iconSrc, category, score }) => {
       `}
 		>
 			<div className="summary-card-wrapper w-fit h-fit flex gap-x-[1.2rem]">
-				<img
-					src={iconSrc}
-					className="summary-card-icon
-        
-          "
-				/>
+				<img src={importedIconSrc} className="summary-card-icon" />
 				<h3
 					className={`summary-card-category
           ${_customtheme.mbody}
@@ -53,10 +60,7 @@ const SummaryCard: React.FC<Props> = ({ iconSrc, category, score }) => {
 					{category}
 				</h3>
 			</div>
-			<div
-				className={`summary-card-score-wrapper
-        `}
-			>
+			<div className="summary-card-score-wrapper">
 				<span
 					className={`summary-card-score
           ${_customtheme.mbodyb}
