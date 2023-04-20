@@ -16,9 +16,29 @@
 }
 
 html {
+	height: fit-content;
 	font-size: 62.5%;
+	overflow-y: scroll;
 }
 
+body,
 #root {
+	height: inherit;
 	font-size: 1.6rem;
+}
+
+.attribution {
+	font-size: 16px;
+	text-align: center;
+
+	background-color: #ffffff;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 389px) {
+	.attribution {
+		background-color: #ecf2ff;
+	}
 }
